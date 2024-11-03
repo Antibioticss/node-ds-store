@@ -20,6 +20,10 @@ Helper.prototype.setBackgroundColor = function (red, green, blue) {
   this.opts.backgroundColor = [red, green, blue]
 }
 
+Helper.prototype.setTextSize = function (size) {
+  this.opts.textSize = size
+}
+
 Helper.prototype.setIconSize = function (size) {
   this.opts.iconSize = size
 }
@@ -55,7 +59,7 @@ Helper.prototype.write = function (path, cb) {
   }
 
   this.file.push(Entry.construct('.', 'bwsp', this.opts.window))
-  this.file.push(Entry.construct('.', 'icvp', { iconSize: this.opts.iconSize, rawAlias: rawAlias, colorComponents: colorComponents }))
+  this.file.push(Entry.construct('.', 'icvp', { textSize: this.opts.textSize, iconSize: this.opts.iconSize, rawAlias: rawAlias, colorComponents: colorComponents }))
 
   this.file.write(path, cb)
 }

@@ -32,6 +32,10 @@ Set the background image to file specified by `path`.
 
 Set the background color to the color specified by three floats between 0 and 1.
 
+### file.setTextSize(size)
+
+Set the size of all texts below all icons to `size`.
+
 ### file.setIconSize(size)
 
 Set the size of all icons in the folder to `size`.
